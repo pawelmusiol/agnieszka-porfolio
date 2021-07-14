@@ -1,4 +1,5 @@
-import '../css/style.css'
+import '../css/style.scss'
+import '../css/background.scss'
 import Head from 'next/head'
 import Link from 'next/link'
 

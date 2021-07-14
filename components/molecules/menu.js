@@ -2,7 +2,7 @@ import { MenuLink } from "../atoms"
 
 const Menu = () => {
 	return(
-		<MenuLink href="dupa">Dupa</MenuLink>
+		<MenuLink href="#">Dupa</MenuLink>
 	)
 }
 

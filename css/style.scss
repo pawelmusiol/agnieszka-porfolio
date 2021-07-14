@@ -1,7 +1,7 @@
 body {
   margin: 0;
   height: 100vw;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .side-bar {
@@ -12,34 +12,43 @@ body {
   width: 20%;
   max-width: 250px;
   position: fixed;
+  z-index: 1;
 }
 
 .panel {
   width: calc(100vw - 250px);
   min-width: calc(100vw - 250px);
-  height: 200px;  
+  height: 100vh;  
   display: inline-flex;
 }
 
 .outer-content{
-  direction: rtl;
-  overflow-y:scroll;
-  overflow-x:hidden;
-  transform: rotate(270deg) translateX(-100%);
-  transform-origin: top left;
   position:absolute;
-  width:100vh;
-  height:100vw;
+  width:100vw;
+  height:100vh;
 }
 
 .content {
-  direction: ltr;
-  transform: rotate(90deg) translateY(-100vh);
-  transform-origin: top left;
-  white-space:nowrap;
+  transition: .7s;
+  display:flex;
+  position: absolute;
+  top: 0;
+  left:0;
+  gap:0;
 }
 .pre-panel{
   width:250px;
   min-width:250px;
   display:inline-flex;
+}
+
+.black{
+  background: black;
+}
+.red{
+  background: red;
+}
+
+.contact{
+  background: rgba(0,0,0,0.2)
 }
