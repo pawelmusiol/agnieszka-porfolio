@@ -1,8 +1,18 @@
 import Link from "next/link"
 
-const MenuLink = ({href, children}) => {
+const MenuLink = ({href, children, onClick}) => {
+	
 	return(
-		<Link href={href}>{children}</Link>
+		<>
+		{href ?
+			<Link href={href}>
+				<a onClick={onClick} className="link">{children}</a>
+			</Link>
+			:
+			<a onClick={onClick} className="link">{children}</a>
+		}
+		</>
+		
 	)
 }
 

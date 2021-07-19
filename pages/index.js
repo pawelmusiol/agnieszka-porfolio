@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react"
-import { SideBar, MainDiv } from "../components/organisms"
+import { SideBar, MainDiv, GalleryTab, About } from "../components/organisms"
 
 const Index = () => {
   const contentRef = useRef()
@@ -9,7 +9,7 @@ const Index = () => {
     if (contentRef.current) {
       let width = contentRef.current.childNodes[1].offsetWidth
       console.log(width)
-      if (e.deltaY > 0 && (PositionX > -width * 2)) {
+      if (e.deltaY > 0 && (PositionX > -width * 3)) {
         setPositionX(PositionX - width / 10)
         console.log(PositionX)
       }
@@ -19,6 +19,15 @@ const Index = () => {
 
     }
   }
+
+  const scrollToPanel = (id) => {
+    console.log("test")
+    if (contentRef.current) {
+      let width = contentRef.current.childNodes[1].offsetWidth
+      setPositionX(-width*id)
+    }
+  }
+
   useEffect(() => {
     let div = contentRef.current
     div.style.left = PositionX + "px";
@@ -26,13 +35,16 @@ const Index = () => {
 
   return (
     <div className="" onWheel={(e) => handleScroll(e)}>
-      <SideBar />
+      <SideBar scrollToPanel={scrollToPanel} />
       <MainDiv position={-PositionX}>
         <div className="content" ref={contentRef}>
           <div className="pre-panel"></div>
-          <div className="panel" >a</div>
-          <div className="panel" >test</div>
-          <div className="panel contact" >test</div>
+          <About />
+          <div className="panel" >
+            <GalleryTab />
+          </div>
+          <div className="panel" >Oferta</div>
+          <div className="panel contact" >Kontakt</div>
         </div>
       </MainDiv>
     </div>

@@ -1,7 +1,7 @@
 
 const Logo = () => {
 	return(
-		<h1>Agnieszka Firla</h1>
+		<h1 style={{textAlign: 'center'}}>Agnieszka Firla</h1>
 	)
 }
 
