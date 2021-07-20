@@ -24,7 +24,7 @@ const useGalleryImages = (div, outerDiv, startId, openModal) => {
 		}
 		if (width > 1600) {
 			countX = 6
-			div.current.style.gridTemplateColumns = "16.6% 16.6% 16.6% 16.6% 16.6% 16.6%"
+			div.current.style.gridTemplateColumns = "16.67% 16.67% 16.67% 16.67% 16.67% 16.67%"
 		}
 
 		if (height > 500) {
@@ -37,7 +37,7 @@ const useGalleryImages = (div, outerDiv, startId, openModal) => {
 		}
 		if (height > 1000) {
 			countY = 6
-			div.current.style.gridTemplateRows = "16.6% 16.6% 16.6% 16.6% 16.6% 16.6%"
+			div.current.style.gridTemplateRows = "16.67% 16.67% 16.67% 16.67% 16.67% 16.67%"
 		}
 		if (height > 1600) {
 			countY = 7
@@ -46,8 +46,7 @@ const useGalleryImages = (div, outerDiv, startId, openModal) => {
 
 	}
 	let GalleryDom = setGallery(countX, countY, startId, openModal)
-	console.log(GalleryDom)
-	return GalleryDom
+	return [GalleryDom, countX]
 }
 
 const setGallery = (columnsCount, rowsCount, startId, openModal) => {
@@ -56,12 +55,11 @@ const setGallery = (columnsCount, rowsCount, startId, openModal) => {
 	let row = 1
 	ImagesList.map(image => {
 		if (row <= rowsCount && image.id >= startId) {
-			console.log(row)
 			ImagesDom.push(
 				<Image
 					key={image.id}
 					src={"/gallery-small/mini_" + image.name + ".jpg"}
-					onClick={() => openModal("/gallery/" + image.name + ".jpg")}
+					onClick={() => openModal("/gallery-hd/" + image.name + ".jpg")}
 					column={column}
 					row={row}
 					width={column}
@@ -78,12 +76,13 @@ const setGallery = (columnsCount, rowsCount, startId, openModal) => {
 	return ImagesDom
 }
 
-const GalleryImages = ({openModal}) => {
+const GalleryImages = ({ openModal }) => {
 	const ref = useRef()
 	const outerRef = useRef()
 	const [ImagesDom, setImagesDom] = useState(<></>)
 	const [StartId, setStartId] = useState(1)
-	
+	const [ChangeCount, setChangeCount] = useState(1)
+
 	const setIdStart = (change, direction) => {
 		if (StartId - change <= 0 && direction === "minus") {
 			setStartId(0)
@@ -94,16 +93,18 @@ const GalleryImages = ({openModal}) => {
 	}
 
 	useEffect(() => {
-		setImagesDom(useGalleryImages(ref, outerRef, StartId, openModal))
+		const [GalleryDom, changeCount] = useGalleryImages(ref, outerRef, StartId, openModal)
+		setImagesDom(GalleryDom)
+		setChangeCount(changeCount)
 	}, [ref, StartId])
 
 	return (
 		<div ref={outerRef} className="gallery-outer">
-			<Button onClick={() => setIdStart(5, "minus")} className="gallery-button" >Mniej!</Button>
+			<Button onClick={() => setIdStart(ChangeCount, "minus")} className="gallery-button" >Back!</Button>
 			<div className="gallery-images" ref={ref}>
 				{ImagesDom}
 			</div>
-			<Button onClick={() => setIdStart(5, "plus")} className="gallery-button" >Więcej!</Button>
+			<Button onClick={() => setIdStart(ChangeCount, "plus")} className="gallery-button" >More!</Button>
 		</div>
 	)
 }

@@ -1,11 +1,17 @@
 import SideBar from "./side-bar"
 import MainDiv from "./main-div"
 import GalleryTab from "./gallery-tab"
-import About from "./about"
+import Landing from "./landing"
+import OfferSection from "./offer-section"
+import Contact from "./contact"
+import ContactForm from "./contact-form"
 
 export {
 	SideBar,
 	MainDiv,
 	GalleryTab,
-	About
+	Landing,
+	OfferSection,
+	Contact,
+	ContactForm,
 }

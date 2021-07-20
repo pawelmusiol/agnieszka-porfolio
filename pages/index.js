@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react"
-import { SideBar, MainDiv, GalleryTab, About } from "../components/organisms"
+import { SideBar, MainDiv, GalleryTab, Landing, OfferSection, Contact, ContactForm } from "../components/organisms"
 
 const Index = () => {
   const contentRef = useRef()
@@ -16,6 +16,9 @@ const Index = () => {
       else if (e.deltaY < 0 && !(PositionX + width / 10 > 0)) {
         setPositionX(PositionX + width / 10)
       }
+      else if (e.deltaY < 0 && !(PositionX + width / 10 < 0)) {
+        setPositionX(0)
+      }
 
     }
   }
@@ -24,7 +27,7 @@ const Index = () => {
     console.log("test")
     if (contentRef.current) {
       let width = contentRef.current.childNodes[1].offsetWidth
-      setPositionX(-width*id)
+      setPositionX(-width * id)
     }
   }
 
@@ -39,12 +42,14 @@ const Index = () => {
       <MainDiv position={-PositionX}>
         <div className="content" ref={contentRef}>
           <div className="pre-panel"></div>
-          <About />
+          <Landing />
           <div className="panel" >
             <GalleryTab />
           </div>
-          <div className="panel" >Oferta</div>
-          <div className="panel contact" >Kontakt</div>
+          <OfferSection />
+          <Contact>
+            <ContactForm />
+          </Contact>
         </div>
       </MainDiv>
     </div>

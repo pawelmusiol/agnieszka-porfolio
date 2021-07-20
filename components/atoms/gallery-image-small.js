@@ -16,7 +16,12 @@ const GalleryImageSmall = ({ src, column, row, width, length, id, className, onC
 	const style = useStyle(column, row, width, length)
 
 	return (
-		<div className={Classes} style = {style} onClick={onClick}>
+		<div className={Classes} style={style} onClick={onClick}>
+			<div className="image-top" >
+				<p className="image-more">
+					More
+				</p>
+			</div>
 			<img src={src} />
 		</div>
 	)
