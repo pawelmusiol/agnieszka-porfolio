@@ -9,6 +9,9 @@ import OfferPriceCell from "./offer-price-cell"
 import Input from "./input"
 import Label from "./label"
 
+import GalleryColumn from "./gallery-column"
+import GalleryImage from "./gallery-image"
+
 export {
 	MenuLink,
 	BackgroundLayer,
@@ -19,5 +22,8 @@ export {
 	OfferImage,
 	OfferPriceCell,
 	Input,
-	Label
+	Label,
+
+	GalleryImage,
+	GalleryColumn
 }

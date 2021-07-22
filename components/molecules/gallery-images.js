@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react"
 import { GalleryImageSmall as Image, Button } from "../atoms"
 import { Gallery as ImagesList } from "../helpers"
 
-const useGalleryImages = (div, outerDiv, startId, openModal) => {
+const useGalleryImages = (div, outerDiv, startId, openModal, Category) => {
 	let countX = 2
 	let countY = 2
 
@@ -45,16 +45,17 @@ const useGalleryImages = (div, outerDiv, startId, openModal) => {
 		}
 
 	}
-	let GalleryDom = setGallery(countX, countY, startId, openModal)
+	let GalleryDom = setGallery(countX, countY, startId, openModal, Category)
 	return [GalleryDom, countX]
 }
 
-const setGallery = (columnsCount, rowsCount, startId, openModal) => {
+const setGallery = (columnsCount, rowsCount, startId, openModal, Category) => {
 	let ImagesDom = []
 	let column = 1
 	let row = 1
 	ImagesList.map(image => {
-		if (row <= rowsCount && image.id >= startId) {
+		console.log(Category)
+		if (row <= rowsCount && image.id >= startId && (Category === 0 || Category === image.category)) {
 			ImagesDom.push(
 				<Image
 					key={image.id}
@@ -76,7 +77,7 @@ const setGallery = (columnsCount, rowsCount, startId, openModal) => {
 	return ImagesDom
 }
 
-const GalleryImages = ({ openModal }) => {
+const GalleryImages = ({ openModal, Category }) => {
 	const ref = useRef()
 	const outerRef = useRef()
 	const [ImagesDom, setImagesDom] = useState(<></>)
@@ -93,10 +94,10 @@ const GalleryImages = ({ openModal }) => {
 	}
 
 	useEffect(() => {
-		const [GalleryDom, changeCount] = useGalleryImages(ref, outerRef, StartId, openModal)
+		const [GalleryDom, changeCount] = useGalleryImages(ref, outerRef, StartId, openModal, Category)
 		setImagesDom(GalleryDom)
 		setChangeCount(changeCount)
-	}, [ref, StartId])
+	}, [ref, StartId, Category])
 
 	return (
 		<div ref={outerRef} className="gallery-outer">

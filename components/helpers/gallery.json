@@ -1,190 +1,237 @@
 [
 	{
 		"name": "blogostan",
-		"id": 1
+		"id": 1,
+		"category": 1
 	},
 	{
 		"name": "cabrakanTlo2",
-		"id": 2
+		"id": 2,
+		"category": 1
 	},
 	{
 		"name": "camazotz3",
-		"id": 3
+		"id": 3,
+		"category": 2
 	},
 	{
 		"name": "corvinZMlasarte2",
-		"id": 4
+		"id": 4,
+		"category": 1
 	},
 	{
 		"name": "detal2",
-		"id": 5
+		"id": 5,
+		"category": 2
 	},
 	{
 		"name": "elfy2",
-		"id": 6
+		"id": 6,
+		"category": 1
 	},
 	{
 		"name": "halfOrc2",
-		"id": 7
+		"id": 7,
+		"category": 4
 	},
 	{
 		"name": "hydraFight",
-		"id": 8
+		"id": 8,
+		"category": 1
 	},
 	{
 		"name": "Iydrith2",
-		"id": 9
+		"id": 9,
+		"category": 4
 	},
 	{
 		"name": "kosciej",
-		"id": 10
+		"id": 10,
+		"category": 1
 	},
 	{
 		"name": "kukulkanTlo2",
-		"id": 11
+		"id": 11,
+		"category": 1
 	},
 	{
 		"name": "landscape1A",
-		"id": 12
+		"id": 12,
+		"category": 1
 	},
 	{
 		"name": "landscape2A",
-		"id": 13
+		"id": 13,
+		"category": 1
 	},
 	{
 		"name": "landscape3A",
-		"id": 14
+		"id": 14,
+		"category": 1
 	},
 	{
 		"name": "landscape4A",
-		"id": 15
+		"id": 15,
+		"category": 4
 	},
 	{
 		"name": "landscape5A",
-		"id": 16
+		"id": 16,
+		"category": 1
 	},
 	{
 		"name": "landscape6A",
-		"id": 17
+		"id": 17,
+		"category": 1
 	},
 	{
 		"name": "landscapef",
-		"id": 18
+		"id": 18,
+		"category": 4
 	},
 	{
 		"name": "laurelhil",
-		"id": 19
+		"id": 19,
+		"category": 1
 	},
 	{
 		"name": "laurielle1.2",
-		"id": 20
+		"id": 20,
+		"category": 1
 	},
 	{
 		"name": "laurielle1",
-		"id": 21
+		"id": 21,
+		"category": 4
 	},
 	{
 		"name": "laurielle2.2",
-		"id": 22
+		"id": 22,
+		"category": 2
 	},
 	{
 		"name": "laurielle2.3",
-		"id": 23
+		"id": 23,
+		"category": 2
 	},
 	{
 		"name": "Laurielle2",
-		"id": 24
+		"id": 24,
+		"category": 2
 	},
 	{
 		"name": "laurielle3.2",
-		"id": 25
+		"id": 25,
+		"category": 4
 	},
 	{
 		"name": "laurielle3",
-		"id": 26
+		"id": 26,
+		"category": 1
 	},
 	{
 		"name": "laurielle4.2",
-		"id": 27
+		"id": 27,
+		"category": 1
 	},
 	{
 		"name": "laurielle4",
-		"id": 28
+		"id": 28,
+		"category": 1
 	},
 	{
 		"name": "laurielle5",
-		"id": 29
+		"id": 29,
+		"category": 1
 	},
 	{
 		"name": "laurielle6.3",
-		"id": 30
+		"id": 30,
+		"category": 3
 	},
 	{
 		"name": "laurielle6",
-		"id": 31
+		"id": 31,
+		"category": 3
 	},
 	{
 		"name": "laurielle7.2",
-		"id": 32
+		"id": 32,
+		"category": 1
 	},
 	{
 		"name": "laurielle7",
-		"id": 33
+		"id": 33,
+		"category": 1
 	},
 	{
 		"name": "laurielleMistrzyniMagii2",
-		"id": 34
+		"id": 34,
+		"category": 4
 	},
 	{
 		"name": "laurielleSukienka2",
-		"id": 35
+		"id": 35,
+		"category": 1
 	},
 	{
 		"name": "lazniaWKopalni2",
-		"id": 36
+		"id": 36,
+		"category": 4
 	},
 	{
 		"name": "loria2",
-		"id": 37
+		"id": 37,
+		"category": 1
 	},
 	{
 		"name": "mayraFinalVersionTlo2",
-		"id": 38
+		"id": 38,
+		"category": 2
 	},
 	{
 		"name": "milvianRihirimProgress",
-		"id": 39
+		"id": 39,
+		"category": 2
 	},
 	{
 		"name": "mrokNocyZBlaskiemKsiezyca2",
-		"id": 40
+		"id": 40,
+		"category": 1
 	},
 	{
 		"name": "n3",
-		"id": 41
+		"id": 41,
+		"category": 3
 	},
 	{
 		"name": "nivye2",
-		"id": 42
+		"id": 42,
+		"category": 3
 	},
 	{
 		"name": "portretChlopaka",
-		"id": 43
+		"id": 43,
+		"category": 1
 	},
 	{
 		"name": "rielldeth2",
-		"id": 44
+		"id": 44,
+		"category": 1
 	},
 	{
 		"name": "szkic2",
-		"id": 45
+		"id": 45,
+		"category": 1
 	},
 	{
 		"name": "teotihuacanTlo2",
-		"id": 46
+		"id": 46,
+		"category": 1
 	},
 	{
 		"name": "vivandrel2",
-		"id": 47
+		"id": 47,
+		"category": 4
 	}
 ]
