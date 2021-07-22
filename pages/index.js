@@ -12,13 +12,12 @@ const Index = () => {
     if (contentRef.current) {
       let width = contentRef.current.childNodes[1].offsetWidth
       let height = contentRef.current.childNodes[1].offsetHeight
-      console.log(width)
       if (PositionX === -width) {
         handleGalleryScroll(e, width, height)
       }
       else if (e.deltaY > 0 && (PositionX > -width * 3)) {
         setPositionX(PositionX - width / 10)
-        console.log(PositionX)
+
       }
       else if (e.deltaY < 0 && !(PositionX + width / 10 > 0)) {
         setPositionX(PositionX + width / 10)
@@ -37,7 +36,7 @@ const Index = () => {
     }
     setTimeout(() => {
     if (e.deltaY > 0 && GalleryPositionY === -GalleryHeight + height ) {
-      console.log("dupa")
+
       setPositionX(PositionX - width / 10)
       setExtrem(true)
     }
@@ -58,14 +57,14 @@ const Index = () => {
       setGalleryPositionY(0)
     }
     if (GalleryPositionY < -GalleryHeight + height) {
-      console.log(-GalleryHeight - height)
+
       setGalleryPositionY(-GalleryHeight + height)
     }
   }, timeout)
   }
 
   const scrollToPanel = (id) => {
-    console.log("test")
+
     if (contentRef.current) {
       let width = contentRef.current.childNodes[1].offsetWidth
       setPositionX(-width * id)

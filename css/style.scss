@@ -43,7 +43,7 @@ html {
   width: 20%;
   max-width: 250px;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   padding: 10px 0;
 }
 
@@ -202,6 +202,10 @@ html {
   border: none;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+.gallery-category button:hover{
+  background-color:rgba(114, 149, 180, 1);
 }
 
 .gallery-list{

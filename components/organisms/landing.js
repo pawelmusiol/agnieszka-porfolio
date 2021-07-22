@@ -10,7 +10,7 @@ const Landing = () => {
 			<div className="specs">
 				<h2>Portraits</h2>
 				<h2>Ilustrations</h2>
-				<h2>Cancept Arts</h2>
+				<h2>Concept Arts</h2>
 				<h2>Character Design</h2>
 			</div>
 		</div>
