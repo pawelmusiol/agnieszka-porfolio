@@ -12,6 +12,7 @@ import InputLabel from "./input-label"
 import ContactSocial from "./contact-social"
 
 import GalleryList from "./gallery-image-list"
+import OfferImages from "./offer-images-section"
 
 export {
 	Menu,
@@ -26,5 +27,6 @@ export {
 	OfferText,
 	InputLabel,
 	ContactSocial,
-	GalleryList
+	GalleryList,
+	OfferImages
 }

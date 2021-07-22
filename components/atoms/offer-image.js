@@ -1,9 +1,14 @@
 
-const OfferImage = ({src, src2}) => {
+const OfferImage = ({ src, type, style }) => {
 	return (
 		<div className="offer-image-container">
-			<img src={src} className="offer-image" />
-			<img src={src2} className="offer-image second" />
+			<div className="offer-image-box">
+				<img src={src} className="offer-image" />
+			</div>
+			<div className="image-text">
+				<p>{type}</p>
+				<p>{style}</p>
+			</div>
 		</div>
 	)
 }

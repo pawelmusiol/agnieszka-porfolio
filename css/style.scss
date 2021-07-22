@@ -114,7 +114,7 @@ html {
   height: auto;
   overflow: hidden;
   position: relative;
-  padding:1vw;
+  padding: 1vw;
 }
 .gallery-image-small > img {
   width: 100%;
@@ -154,7 +154,7 @@ html {
 
 .gallery-image-small:hover > .image-top {
   top: calc(1.3vh);
-  height:calc(100% - 3vh); 
+  height: calc(100% - 3vh);
 }
 
 .gallery-outer {
@@ -184,7 +184,7 @@ html {
   background-color: #fff;
 }
 
-.gallery-category{
+.gallery-category {
   height: 3vh;
   max-height: 3vh;
   display: flex;
@@ -193,25 +193,25 @@ html {
   //padding-top: .4vw;
 }
 
-.gallery-category button{
+.gallery-category button {
   width: 100%;
   font-family: "Playfair Display", serif;
   background: rgba(114, 149, 180, 0.7);
-  padding: .5% 1%;
+  padding: 0.5% 1%;
   color: white;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
 }
 
-.gallery-category button:hover{
-  background-color:rgba(114, 149, 180, 1);
+.gallery-category button:hover {
+  background-color: rgba(114, 149, 180, 1);
 }
 
-.gallery-list{
+.gallery-list {
   width: calc(100vw - 250px);
   display: flex;
-  position:absolute;
+  position: absolute;
   transition: 0.3s;
   justify-content: space-evenly;
 }
@@ -302,21 +302,28 @@ html {
   height: 100vh;
   max-height: 100vh;
   position: relative;
+  align-items: center;
 }
 
-.offer::before{
+.offer h1 {
+  padding: 1% 2%;
+  width: fit-content;
+}
+
+.offer h1:nth-child(2n) {
+  background: black;
+  color: white;
+}
+
+.offer::before {
   content: " ";
   background: red;
-  width:calc((100vw - 250px) / 2);
-  height:100vh;
+  width: calc((100vw - 250px) / 2);
+  height: 100vh;
   left: calc((100vw - 250px) / -2);
-  background: rgba(255,255,255, 0.2);
-background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 100%);
+  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
   position: absolute;
-}
-
-.offer .offer-section:nth-child(2n + 1) {
-  flex-direction: row-reverse;
 }
 
 .offer-section {
@@ -328,29 +335,56 @@ background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2)
 }
 
 .offer-image-container {
-  margin-left: 3%;
-  height: 70%;
-  display: inline-flex;
+  //margin-left: 3%;
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  height: fit-content;
   gap: 10px;
+  border: 5px white solid;
+  background: white;
+  //transform: rotate(5deg);
+}
+
+.image-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .offer-image {
-  transform: rotate(5deg);
-  border: 5px white solid;
   max-width: 100%;
   max-height: 100%;
+  object-fit: cover;
+}
+
+.offer-images {
+  width: calc(100vw - 250px - 4vw);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2vw;
+  gap: 2vw;
+}
+
+.offer-prices-container {
+  width: 60%;
+  margin: 10px auto;
+  max-width: 1200px;
 }
 
 .offer-prices {
-  border-collapse: collapse;
-  border-style: hidden;
+  border: none;
   font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  table-layout: fixed;
 }
 
-.offer-prices td,
-.offer-prices th {
-  border: 3px solid black;
-  padding: 5px;
+.table-price {
+  font-size: 2rem;
 }
 
 .offer-prices td {
@@ -365,19 +399,9 @@ background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2)
   max-width: 60%;
 }
 
-.offer-image-container .second {
-  display: none;
-}
-
 @media only screen and (min-width: 1300px) {
   .offer-section-text {
     max-width: 40%;
-  }
-  .offer-image-container {
-    height: 90%;
-  }
-  .offer-image-container .second {
-    display: block;
   }
 }
 
@@ -395,12 +419,12 @@ background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2)
   max-height: 100vh;
 }
 
-.contact-container{
+.contact-container {
   gap: 1vw;
   color: #eee;
   font-size: 1.1rem;
-  background: rgba(72,72,72,0.9);
-  padding:2%;
+  background: rgba(72, 72, 72, 0.9);
+  padding: 2%;
   display: flex;
   flex-direction: row;
 }
@@ -411,7 +435,7 @@ background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2)
   align-items: flex-start;
 }
 
-.contact-button{
+.contact-button {
   margin-top: 5px;
   padding: 5px;
   width: 100%;
@@ -425,24 +449,24 @@ background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2)
   border: none;
 }
 
-.form-label{
+.form-label {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.form-row{
+.form-row {
   display: flex;
   flex-direction: row;
-  gap:5px;
+  gap: 5px;
 }
 
-.form-container{
+.form-container {
   padding-right: 1vw;
   border-right: 1px solid white;
 }
 
-.contact-social{
+.contact-social {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -454,26 +478,91 @@ background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2)
   align-items: center;
 }
 
-.contact-social a{
+.contact-social a {
   text-decoration: none;
   color: white;
   transition: 0.3s;
-  
 }
 
 .contact-social div:hover a {
   background-size: 100% 2px;
 }
 
-.icon-text{
+.icon-text {
   background: linear-gradient(#fff, #fff) bottom/0% 2px no-repeat;
   background-position-x: -100%;
 }
 
-.contact-icon{
+.contact-icon {
   width: 48px;
-  height:48px;
+  height: 48px;
   position: relative;
   margin: 2px;
+}
+
+@media only screen and (max-width: 768px) {
+  .html,
+  body {
+    background: rgba(0, 0, 0, 1);
+    //height:400vh;
+    color: #eee;
+  }
+  .content {
+    position: unset;
+    flex-direction: column;
+    width: 100%;
+  }
+  .side-bar,
+  .pre-panel {
+    display: none;
+  }
+
+  .main-background {
+    width: 400vw;
+  }
+  .background-layer {
+    width: unset !important;
+  }
+
+  .gallery-tab {
+    display: none;
+  }
+
+  .landing h1,
+  .landing h2 {
+    font-size: 1.8rem;
+  }
+  .landing h1,
+  .landing p {
+    color: black;
+  }
+
+  .landing p {
+    font-size: 1rem;
+  }
+  .panel {
+    width: 100%;
+  }
+  .offer-prices-container {
+    width: 80%;
+    padding: 0 10%;
+  }
+  .offer-prices-container p {
+    margin: 5% -7%;
+    font-size: 0.8rem;
+  }
+  .offer-prices * {
+    font-size: 0.6rem;
+  }
+  .offer-images {
+    color: black;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .offer {
+    height: fit-content;
+    max-height: unset !important;
+  }
 }
 // #endregion

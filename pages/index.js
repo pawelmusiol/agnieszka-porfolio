@@ -77,7 +77,7 @@ const Index = () => {
   }, [PositionX])
 
   return (
-    <div className="" onWheel={(e) => handleScroll(e)}>
+    <div className="main" onWheel={(e) => handleScroll(e)}>
       <SideBar scrollToPanel={scrollToPanel} />
       <MainDiv position={-PositionX}>
         <div className="content" ref={contentRef}>
