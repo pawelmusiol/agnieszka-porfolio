@@ -24,7 +24,7 @@ const ContactForm = () => {
 	return (
 		<div className="contact-container">
 			<div className="form-container">
-				<h1>Let Be In Touch!</h1>
+				<h1>Let's Be In Touch!</h1>
 				<form className="contact-form">
 					<div className="form-row">
 						<InputLabel value={FirstName} setValue={setFirstName} label="First Name" />
