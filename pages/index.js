@@ -76,6 +76,9 @@ const Index = () => {
     div.style.left = PositionX + "px";
   }, [PositionX])
 
+  const GalleryRef = useRef()
+  const ButtonRef = useRef()
+
   return (
     <div className="main" onWheel={(e) => handleScroll(e)}>
       <SideBar scrollToPanel={scrollToPanel} />
@@ -83,8 +86,13 @@ const Index = () => {
         <div className="content" ref={contentRef}>
           <div className="pre-panel"></div>
           <Landing />
-          <div className="panel" >
+          <div className="panel gallery" ref={GalleryRef} >
             <GalleryTab setGalleryHeight={setGalleryHeight} position={PositionX} positionY={GalleryPositionY} />
+            <button ref={ButtonRef} className="more-button"
+            onClick={() => {
+              GalleryRef.current.style.height = "fit-content"
+              ButtonRef.current.style.display = "none"
+            }}>See More</button>
           </div>
           <OfferSection />
           <Contact>
