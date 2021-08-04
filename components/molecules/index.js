@@ -14,6 +14,10 @@ import ContactSocial from "./contact-social"
 import GalleryList from "./gallery-image-list"
 import OfferImages from "./offer-images-section"
 
+import TopMenu from "./top-menu"
+import MessegeContainter from "./messege-containter"
+import ImageAdmin from "./image-admin"
+
 export {
 	Menu,
 	Logo,
@@ -28,5 +32,8 @@ export {
 	InputLabel,
 	ContactSocial,
 	GalleryList,
-	OfferImages
+	OfferImages,
+	TopMenu,
+	MessegeContainter,
+	ImageAdmin
 }

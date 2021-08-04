@@ -12,8 +12,8 @@ const ContactSocial = () => {
 				<a target="_blank" href="https://www.instagram.com/milvian_art/" className="icon-text">Instagram</a>
 			</div>
 			<div>
-				<Icon src="/social/youtube.svg" href="https://www.youtube.com/" className="contact-icon" />
-				<a target="_blank" href="https://www.youtube.com/" className="icon-text">Youtube</a>
+				<Icon src="/social/youtube.svg" href="https://www.youtube.com/channel/UCRhrq200FjjtBGW9LMjIJmw" className="contact-icon" />
+				<a target="_blank" href="https://www.youtube.com/channel/UCRhrq200FjjtBGW9LMjIJmw" className="icon-text">Youtube</a>
 			</div>
 			<div>
 				<Icon src="/social/patreon.svg" href="https://www.patreon.com/milvian_art_agnieszka_firla" className="contact-icon" />

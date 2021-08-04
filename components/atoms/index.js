@@ -12,6 +12,8 @@ import Label from "./label"
 import GalleryColumn from "./gallery-column"
 import GalleryImage from "./gallery-image"
 
+import MessegeCell from "./messege-cell"
+
 export {
 	MenuLink,
 	BackgroundLayer,
@@ -25,5 +27,7 @@ export {
 	Label,
 
 	GalleryImage,
-	GalleryColumn
+	GalleryColumn,
+
+	MessegeCell
 }

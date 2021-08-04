@@ -501,16 +501,19 @@ html {
 }
 
 @media only screen and (max-width: 768px) {
-  .html,
+  html,
   body {
+    height: fit-content;
     background: rgba(0, 0, 0, 1);
     //height:400vh;
     color: #eee;
+    overflow:unset !important;
   }
+
   .content {
     position: unset;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
   }
   .side-bar,
   .pre-panel {
@@ -518,7 +521,9 @@ html {
   }
 
   .main-background {
-    width: 400vw;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
   }
   .background-layer {
     width: unset !important;

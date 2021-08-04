@@ -56,6 +56,21 @@ const setGallery = (columnsCount, rowsCount, startId, openModal, Category) => {
 	ImagesList.map(image => {
 		console.log(Category)
 		if (row <= rowsCount && image.id >= startId && (Category === 0 || Category === image.category)) {
+			console.log(image.name[image.name.length - 5])
+			if (image.name[image.name.length - 5] === '.'){
+				ImagesDom.push(
+					<Image
+						key={image.id}
+						src={"/gallery-small/mini_" + image.name}
+						onClick={() => openModal("/gallery-hd/" + image.name)}
+						column={column}
+						row={row}
+						width={column}
+						length={row}
+					/>
+				)
+			}
+			else{
 			ImagesDom.push(
 				<Image
 					key={image.id}
@@ -67,6 +82,7 @@ const setGallery = (columnsCount, rowsCount, startId, openModal, Category) => {
 					length={row}
 				/>
 			)
+			}
 			column++
 			if (column > columnsCount) {
 				column = 1

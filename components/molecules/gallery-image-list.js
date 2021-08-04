@@ -1,6 +1,7 @@
 import { GalleryColumn, GalleryImage } from "../atoms";
-import { Gallery as GalleryData } from "../helpers"
+//import { Gallery as GalleryData } from "../helpers"
 import { useState, useEffect, useRef } from "react"
+import axios from "axios"
 
 const getWidth = (width) => {
 	let columnsCount = 2
@@ -20,30 +21,56 @@ const getWidth = (width) => {
 
 }
 
+const useImages = () => {
+
+
+	return Images
+}
+
 const useGalleryImages = (Category, GalleryRef, openModal) => {
 	const [GalleryDom, setGalleryDom] = useState(<></>);
+	const [Images, setImages] = useState([])
+
+	useEffect(() => {
+		axios.get('api/image').then((response) => {
+			console.log(response.data)
+			setImages(response.data)
+		})
+	}, [])
 
 	useEffect(() => {
 		let columnsCount = 2
-		if (GalleryRef.current) {
-			
+
+		if (GalleryRef.current && Images) {
+
 			columnsCount = getWidth(GalleryRef.current.offsetWidth)
 			console.log(columnsCount)
 			let counter = 0
 			let images = []
 			let columns = []
 			for (let i = 0; i < columnsCount; i++) {
-				columns.push([])	
+				columns.push([])
 			}
-			for (const Image of GalleryData) {
+			for (const Image of Images) {
 				if (Category === 0 || Category === Image.category) {
-					columns[counter].push(
-						<GalleryImage key={Image.id}
-							src={"/gallery-small/mini_" + Image.name + ".jpg"}
-							onClick={() => openModal("/gallery-hd/" + Image.name + ".jpg")}
-						/>
-					)
-					if (counter === columnsCount-1) {
+					console.log(Image.name[Image.name.length - 4] === ".")
+					if (Image.name[Image.name.length - 4] === ".") {
+						columns[counter].push(
+							<GalleryImage /*key={Image.id}*/
+								src={"/gallery-small/mini_" + Image.name}
+								onClick={() => openModal("/gallery-hd/" + Image.name)}
+							/>
+						)
+					}
+					else {
+						columns[counter].push(
+							<GalleryImage /*key={Image.id}*/
+								src={"/gallery-small/mini_" + Image.name + ".jpg"}
+								onClick={() => openModal("/gallery-hd/" + Image.name + ".jpg")}
+							/>
+						)
+					}
+					if (counter === columnsCount - 1) {
 						counter = -1
 					}
 					counter++
@@ -62,7 +89,7 @@ const useGalleryImages = (Category, GalleryRef, openModal) => {
 			setGalleryDom(images)
 
 		}
-	}, [Category, GalleryRef]);
+	}, [Category, GalleryRef, Images]);
 	return GalleryDom
 }
 

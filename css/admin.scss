@@ -1,0 +1,100 @@
+.admin-top {
+	position: fixed;
+	width: 80%;
+	display: flex;
+	background: #dedede;
+	justify-content: flex-start;
+	padding: 0 10%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+.admin-menu {
+	display: flex;
+	gap: 10px;
+}
+.admin-menu a {
+	text-decoration: none;
+}
+
+.admin-content {
+	max-width: 1400px;
+	width: 80%;
+	margin: auto;
+	margin-top: 3vw;
+}
+
+.messege-list {
+	//display: flex;
+	//flex-wrap:wrap;
+	//justify-content: space-between;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 25% 25% 25% 25%;
+	height: 80vh;
+}
+
+.messege-container {
+	margin: 3%;
+	background: #dedede;
+	border-radius: 3px;
+	padding: 5%;
+}
+
+.messege-name {
+	display: flex;
+	justify-content: flex-start;
+	gap: 0.8rem;
+}
+
+.messege-container p {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	//white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.messege-personal p {
+	margin: 2px;
+}
+
+.smaller {
+	font-size: 0.8rem;
+}
+
+.messege-content {
+	margin-bottom: 0.5rem;
+}
+
+.images-container {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	width: 100%;
+}
+
+.admin-image-container {
+	width: 100%;
+	position: relative;
+}
+
+.admin-image-container p{
+	position: absolute;
+	color: #eee;
+	width: 100%;
+	text-align: center;
+}
+
+.admin-image-container .bottom{
+	bottom:0;
+	color: black;
+}
+
+.admin-image-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 20%;
+}

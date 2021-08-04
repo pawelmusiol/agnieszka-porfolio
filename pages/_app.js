@@ -1,5 +1,6 @@
 import '../css/style.scss'
 import '../css/background.scss'
+import '../css/admin.scss'
 import Head from 'next/head'
 import Link from 'next/link'
 
