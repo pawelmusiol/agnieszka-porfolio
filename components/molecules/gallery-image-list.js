@@ -1,5 +1,5 @@
 import { GalleryColumn, GalleryImage } from "../atoms";
-//import { Gallery as GalleryData } from "../helpers"
+import { Gallery as GalleryData } from "../helpers"
 import { useState, useEffect, useRef } from "react"
 import axios from "axios"
 
@@ -32,10 +32,11 @@ const useGalleryImages = (Category, GalleryRef, openModal) => {
 	const [Images, setImages] = useState([])
 
 	useEffect(() => {
-		axios.get('api/image').then((response) => {
+		/*axios.get('api/image').then((response) => {
 			console.log(response.data)
 			setImages(response.data)
-		})
+		})*/
+		setImages(GalleryData)
 	}, [])
 
 	useEffect(() => {
